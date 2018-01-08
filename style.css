@@ -15,7 +15,19 @@ li{
     padding: 15px;
 }
 .container{
-    width: 700px;
-    margin: 30px auto;
+    text-align: start;
+    width: auto;
+    padding: 10px;
+    margin: 10px auto;
     background-color:coral;
+}
+.title_class{
+    text-align: start;
+    width: auto;
+    /* this is how you add  */
+    color: green;
+}
+.title_href_class{
+    color: crimson
+    
 }
