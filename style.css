@@ -9,10 +9,32 @@ li{
     text-align: left;
 }
 .header{
-    background: chocolate;
+    background: rgb(7, 160, 109);
     -webkit-text-fill-color: blanchedalmond;
     border-bottom: #ccc 3px solid;
     padding: 15px;
+}
+
+.my_first_js{
+    text-align: start;
+    background: rgb(156, 130, 130);
+    /* -webkit-text-fill-color: black; */
+    border-bottom: #ccc 4px solid;
+    padding: 10px;
+}
+.js2{
+    text-align: start;
+    background: rgb(156, 130, 130);
+    -webkit-text-fill-color: black;
+    border-bottom: #ccc 4px solid;
+    padding: 10px;
+}
+.js3{
+    text-align: start;
+    background: rgb(156, 130, 130);
+    -webkit-text-fill-color: black;
+    border-bottom: #ccc 4px solid;
+    padding: 10px;
 }
 .container{
     text-align: start;
@@ -30,4 +52,11 @@ li{
 .title_href_class{
     color: crimson
     
+}
+.tryBtn{
+    color: black;
+    margin: 10px;
+    -webkit-text-fill-color: aliceblue;
+    padding: 10px;
+    background: black
 }
