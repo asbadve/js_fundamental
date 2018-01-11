@@ -1,5 +1,4 @@
 body{
-    text-align: center;
     font-family: arial;
     font-size: 20px;
 }
@@ -9,8 +8,9 @@ li{
     text-align: left;
 }
 .header{
-    background: rgb(7, 160, 109);
-    -webkit-text-fill-color: blanchedalmond;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(0, 0, 0);
     border-bottom: #ccc 3px solid;
     padding: 15px;
 }
@@ -47,7 +47,7 @@ li{
     text-align: start;
     width: auto;
     /* this is how you add  */
-    color: green;
+    color: rgb(86, 92, 86);
 }
 .title_href_class{
     color: crimson
@@ -59,4 +59,57 @@ li{
     -webkit-text-fill-color: aliceblue;
     padding: 10px;
     background: black
+}
+.demo-card-event.mdl-card {
+    width: auto;
+    margin: 20px;
+    height: auto;
+    background: #3E4EB8;
+}
+
+.demo-card-event>.mdl-card__actions {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.demo-card-event>.mdl-card__title {
+    align-items: flex-start;
+}
+
+.demo-card-event>.mdl-card__title>h4 {
+    margin-top: 0;
+}
+
+.demo-card-event>.mdl-card__supporting-text> {
+    margin-top: 0;
+}
+
+.demo-card-event>.mdl-card__supporting-text>h4 {
+    -webkit-text-fill-color: aliceblue;
+}
+
+.demo-card-event>.mdl-card__supporting-text>h7 {
+    -webkit-text-fill-color: aliceblue;
+}
+
+.demo-card-event>.mdl-card__supporting-text>h5 {
+    -webkit-text-fill-color: aliceblue;
+}
+
+
+
+.demo-card-event>.mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+
+.demo-card-event>.mdl-card__actions>.material-icons {
+    padding-right: 10px;
+}
+
+.demo-card-event>.mdl-card__title,
+.demo-card-event>.mdl-card__actions,
+.demo-card-event>.mdl-card__actions>.mdl-button {
+    color: #fff;
 }

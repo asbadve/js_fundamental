@@ -22,49 +22,12 @@
     </div>
 
     <!-- Event card -->
-    <style>
-        .demo-card-event.mdl-card {
-            width: auto;
-            margin: 20px;
-            height: 150px;
-            background: #3E4EB8;
-        }
-
-        .demo-card-event>.mdl-card__actions {
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .demo-card-event>.mdl-card__title {
-            align-items: flex-start;
-        }
-
-        .demo-card-event>.mdl-card__title>h4 {
-            margin-top: 0;
-        }
-
-        .demo-card-event>.mdl-card__actions {
-            display: flex;
-            box-sizing: border-box;
-            align-items: center;
-        }
-
-        .demo-card-event>.mdl-card__actions>.material-icons {
-            padding-right: 10px;
-        }
-
-        .demo-card-event>.mdl-card__title,
-        .demo-card-event>.mdl-card__actions,
-        .demo-card-event>.mdl-card__actions>.mdl-button {
-            color: #fff;
-        }
-    </style>
 
     <div class="demo-card-event mdl-card mdl-shadow--2dp">
         <div class="mdl-card__title mdl-card--expand">
             <h4>1.My First JavaScript</h4>
             <!-- Accent-colored raised button with ripple -->
-            
-            
+
             <script>
 
                 function btnClick() {
@@ -73,82 +36,69 @@
                 }
 
                 function makeTimeInvisible() {
-                    document.getElementById('dateTimeTextLable').innerHTML = ""
+                    document.getElementById('dateTimeTextLable').innerHTML = "Date Time"
                 }
 
             </script>
 
         </div>
-        <h4 id="dateTimeTextLable" style="align-content: center; color: #fff" ></h4>
+        <div class="mdl-card__supporting-text">
+            <h4 id="dateTimeTextLable" style="align-content: center; align-items: center; color: #fff"> Date Time </h4>
+        </div>
+
         <div class="mdl-card__actions mdl-card--border">
             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="btnClick()">
-                    Click me to display Date and Time
+                Click me to display Date and Time
             </a>
             <div class="mdl-layout-spacer"></div>
             <i class="material-icons">event</i>
         </div>
     </div>
-    
-    <div class="js2">
-        <h2>2.Java Script can change the HTML content</h2>
-        <h5 id="h5">One of many JavaScript HTML methods is getElementById()</h5>
-        <div class="inner_js2">
-            <h5>Example:</h5>
-            <h3>document.getElementById("demo").innerHTML = "Hello JavaScript";</h3>
-            <h5>It accept both single quote and double quote</h5>
 
-            <h3>document.getElementById("demo").innerHTML = 'Hello JavaScript';</h3>
+    <div class="demo-card-event mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h4>2.Java Script can change the HTML content</h4>
         </div>
 
-    </div>
-
-    <div class="js3">
-        <h2>2.Java Script can change the HTML content</h2>
-        <h5 id="h5">One of many JavaScript HTML methods is getElementById()</h5>
-        <div class="inner_js3">
-            <h5>Example:</h5>
-            <h3>document.getElementById("demo").innerHTML = "Hello JavaScript";</h3>
-
-
+        <div class="mdl-card__supporting-text">
+            <h7>Example:</h7>
+            <h4>document.getElementById("demo").innerHTML = "Hello JavaScript";</h4>
+            <h5> It accept both single quote and double quote</h5>
+            <h4>document.getElementById("demo").innerHTML = 'Hello JavaScript';</h4>
         </div>
     </div>
 
+    <div class="demo-card-event mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h4>3.JavaScript Can Change HTML Attributes</h4>
+        </div>
+
+        <div class="mdl-card__supporting-text">
+            <h7>This example changes an HTML image by changing the src (source) attribute of an img tag:</h7>
+            <h5> The Light Bulb</h5>
+        </div>
+
+        <div class="mdl-card__media" style="display:table-cell; vertical-align:middle; text-align:center">
+            <div>
+                <img src="pic_bulboff.gif" id="myImage" width="100px" height="auto" border="0" alt="" style="padding:30px; ">
+            </div>
+            
+            <!-- Flat button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+                Turn on the Light
+            </button>
+            
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+                Turn off the Light
+            </button>
+
+            <p></p>
 
 
-    <div class="container" id="container_id">
-
-
-        <h2>Index</h1>
-
-            <script>
-                // #####################################
-                //to check weather the script tag work or not
-                // alert("To check wather the script tag work or not")
-
-                // #####################################
-                /* This is how you add the random text to DOM in pure javascript */
-                var html = '<h3 id="title" class ="title_class"><a href=test.html class ="title_href_class">1.Data Types and Variable</a></h3>';
-
-                appendHtml(document.getElementById
-                    ("container_id"), html)
-
-                //Date Types in java script Number
-                var number1 = 35;
-                var number2 = 50;
-                var addition = number1 + number2;
-                document.writeln("<p>Addition of " + number1 + " And " + number2 + " =  " + addition + "</p>")
-
-
-                function appendHtml(el, str) {
-                    var div = document.createElement('div');
-                    div.innerHTML = str;
-                    while (div.children.length > 0) {
-                        el.appendChild(div.children[0]);
-                    }
-                }
-
-            </script>
+        </div>
     </div>
+
+
 </body>
 
 </html>

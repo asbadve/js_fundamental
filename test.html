@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test </title>
+
+
 </head>
+
 <body>
-    
+
+    <div class="container" id="container_id">
+
+
+        <h2>Index</h1>
+
+            <script>
+                // #####################################
+                //to check weather the script tag work or not
+                // alert("To check wather the script tag work or not")
+
+                // #####################################
+                /* This is how you add the random text to DOM in pure javascript */
+                var html = '<h3 id="title" class ="title_class"><a href=index.html class ="title_href_class">1.Data Types and Variable</a></h3>';
+
+                appendHtml(document.getElementById
+                    ("container_id"), html)
+
+                //Date Types in java script Number
+                var number1 = 35;
+                var number2 = 50;
+                var addition = number1 + number2;
+                document.writeln("<p>Addition of " + number1 + " And " + number2 + " =  " + addition + "</p>")
+
+
+                function appendHtml(el, str) {
+                    var div = document.createElement('div');
+                    div.innerHTML = str;
+                    while (div.children.length > 0) {
+                        el.appendChild(div.children[0]);
+                    }
+                }
+
+            </script>
+    </div>
 </body>
+
 </html>
