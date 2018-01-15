@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="style.css"> -->
+
+    <link rel="stylesheet" href="./mdl/material.min.css">
+    <script src="./mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script> -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 
@@ -23,18 +27,6 @@
                     <h4>1.My First JavaScript</h4>
                     <!-- Accent-colored raised button with ripple -->
 
-                    <script>
-
-                        function btnClick() {
-                            document.getElementById('dateTimeTextLable').innerHTML = Date()
-                            setTimeout("makeTimeInvisible()", 800)
-                        }
-
-                        function makeTimeInvisible() {
-                            document.getElementById('dateTimeTextLable').innerHTML = "Date Time"
-                        }
-
-                    </script>
 
                 </div>
                 <div class="mdl-card__supporting-text">
@@ -42,12 +34,25 @@
                 </div>
 
                 <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="btnClick()">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="document.getElementById('dateTimeTextLable').innerHTML = Date();
+                    ">
                         Click me to display Date and Time
                     </a>
                     <div class="mdl-layout-spacer"></div>
                     <i class="material-icons">event</i>
                 </div>
+                <!-- <script>
+
+                    function btnClick() {
+                        document.getElementById('dateTimeTextLable').innerHTML = Date();
+                        setTimeout("makeTimeInvisible()", 800);
+                    }
+
+                    function makeTimeInvisible() {
+                        document.getElementById('dateTimeTextLable').innerHTML = "Date Time";
+                    }
+
+                </script> -->
             </div>
 
             <div class="demo-card-event mdl-card mdl-shadow--2dp">

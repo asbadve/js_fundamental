@@ -3,11 +3,15 @@
 
 <head>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
+
+    <link rel="stylesheet" href="./mdl/material.min.css">
+    <script src="./mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
-<!-- 
+    <!-- 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script> -->
 
@@ -58,8 +62,50 @@
                 //         $("#drawer_content").load("java_script_w3.html");
                 //     });
                 // });
-                function load_home() {
+                function process() {
                     document.getElementById("drawer_content").innerHTML = '<object type="text/html" data="java_script_w3.html"></object>';
+                }
+
+                function showLoader(show) {
+                    var div = document.getElementById("gb_spinner");
+                    if (show) {
+                        div.className += ' is-active'
+                    } else {
+                        div.className = div.className.replace(/\b is-active\b/, " ");
+                    }
+                }
+
+
+                function load_home(url) {
+                    showLoader(true);
+
+                    url = "java_script_w3.html"
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", url, true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            // alert(xhr.responseText)
+                            // Usage!
+                            showLoader(false);
+                            // sleep(100000).then(() => {
+                            //     debugger;
+                            //     showLoader(false);
+                            // });
+                            document.getElementById("drawer_content").innerHTML = xhr.responseText;
+                            close();
+                
+                        }
+                    }
+                    xhr.send();
+                }
+
+                function close() {
+                    var d = document.querySelector('.mdl-layout');
+                    d.MaterialLayout.toggleDrawer();
+                }
+
+                function sleep(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
                 }
             </script>
 
@@ -72,7 +118,8 @@
 
 
     </div>
-
+    <!-- MDL Spinner Component with Single Color -->
+    <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner" id="gb_spinner"></div>
 
 </body>
 
